@@ -1,7 +1,7 @@
 import type { CollectionConfig } from 'payload'
 
 import { authenticated } from '../../access/authenticated'
-
+import { customGetComments } from './endpoints'
 export const Comments: CollectionConfig = {
   slug: 'comments',
   access: {
@@ -24,5 +24,6 @@ export const Comments: CollectionConfig = {
       required: true,
     },
   ],
+  endpoints: [customGetComments],
   timestamps: true,
 }
